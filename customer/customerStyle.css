@@ -1,0 +1,41 @@
+
+/* This is the CSS for the Body section */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+a {
+    color: royalblue;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+#nav {
+    clear: both;
+    padding: 10px;
+    background-color: #999;
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    word-spacing: 50px;
+    position: sticky;
+    top: 0;
+}
+#nav .selected {
+    color: black;
+}
+#nav .signout {
+
+}
+
+
+
+
+#footer {
+    clear: both;
+    padding: 10px;
+    background-color: #999;
+    color: white;
+    text-align: center;
+}

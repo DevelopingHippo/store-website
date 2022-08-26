@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+a {
+    color: royalblue;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+#nav {
+    clear: both;
+    padding: 10px;
+    background-color: #999;
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    word-spacing: 50px;
+    position: sticky;
+    top: 0;
+}
+#nav .selected {
+    color: black;
+}
+
+.wrapper {
+    clear: both;
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: mediumaquamarine;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.employeePanel {
+    background-color: darkgrey;
+    grid-auto-columns: auto;
+    grid-row: 1;
+    border: 1px solid black;
+    text-align: center;
+}
+.sqlPanel {
+    background-color: darkgrey;
+    grid-auto-columns: auto;
+    grid-row: 1;
+    border: 1px solid black;
+    text-align: center;
+}
+
+#tableBorder table {
+    border: 1px solid black;
+    padding: 5px;
+}
+#tdBorder td {
+    border: 1px solid black;
+    padding: 5px;
+}
+#thBorder th {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+table.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#footer {
+    clear: both;
+    padding: 10px;
+    background-color: #999;
+    color: white;
+    text-align: center;
+}

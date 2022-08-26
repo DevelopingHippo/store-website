@@ -1,0 +1,178 @@
+/* This is the CSS for the Body section */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+a {
+    color: royalblue;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+#nav {
+    clear: both;
+    padding: 10px;
+    background-color: #999;
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    word-spacing: 50px;
+    position: sticky;
+    top: 0;
+}
+#nav .selected {
+    color: black;
+}
+
+
+.wrapper {
+    clear: both;
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: mediumaquamarine;
+    padding: 10px;
+    border-radius: 10px;
+}
+.customerPanel {
+    background-color: darkgrey;
+    grid-auto-columns: auto;
+    grid-row: 1;
+    border: 1px solid black;
+    text-align: center;
+}
+.productPanel {
+    background-color: darkgrey;
+    grid-auto-columns: auto;
+    grid-row: 1;
+    border: 1px solid black;
+    text-align: center;
+}
+.ordersPanel {
+    background-color: darkgrey;
+    grid-auto-columns: auto;
+    grid-row: 1;
+    border: 1px solid black;
+    text-align: center;
+}
+
+#tableBorder table {
+    border: 1px solid black;
+    padding: 5px;
+}
+#tdBorder td {
+    border: 1px solid black;
+    padding: 5px;
+}
+#thBorder th {
+    border: 1px solid black;
+    padding: 5px;
+}
+#orderTable table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+#orderTable td {
+    border-left: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+#productAlerts table {
+    text-align: center;
+}
+
+
+.statwrapper {
+    clear: both;
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: mediumaquamarine;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.overallStatPanel {
+    background-color: darkgrey;
+    grid-auto-columns: auto;
+    grid-row: 2;
+    text-align: center;
+    border: 1px solid black;
+}
+.overallStatPanel table {
+    text-align: center;
+}
+
+.cpuStatPanel {
+    background-color: darkgrey;
+    grid-auto-columns: auto;
+    grid-row: 2;
+    border: 1px solid black;
+    text-align: center;
+}
+.cpuStatPanel table {
+    text-align: center;
+}
+
+.gpuStatPanel {
+    background-color: darkgrey;
+    grid-auto-columns: auto;
+    grid-row: 2;
+    border: 1px solid black;
+    text-align: center;
+}
+.gpuStatPanel table {
+    text-align: center;
+}
+
+.psuStatPanel {
+    background-color: darkgrey;
+    grid-auto-columns: auto;
+    grid-row: 2;
+    border: 1px solid black;
+    text-align: center;
+}
+.psuStatPanel table {
+    text-align: center;
+}
+
+.ramStatPanel {
+    background-color: darkgrey;
+    grid-auto-columns: auto;
+    grid-row: 2;
+    border: 1px solid black;
+    text-align: center;
+}
+.ramStatPanel table {
+    text-align: center;
+}
+
+.motherboardStatPanel {
+    background-color: darkgrey;
+    grid-auto-columns: auto;
+    grid-row: 2;
+    border: 1px solid black;
+    text-align: center;
+}
+.motherboardStatPanel table {
+    text-align: center;
+}
+
+.customStatPanel {
+    background-color: darkgrey;
+    grid-auto-columns: auto;
+    grid-row: 2;
+    border: 1px solid black;
+    text-align: center;
+}
+
+table.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#footer {
+    clear: both;
+    padding: 10px;
+    background-color: #999;
+    color: white;
+    text-align: center;
+}
