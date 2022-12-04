@@ -4,7 +4,7 @@ session_start();
 if(($_POST["password1"] !=  $_POST["password2"])) # If Passwords don't match
 {
     # Redirect with back with Status Message
-    header("location: https://store.thadsander.com/customer/update.php?status=badinput");
+    header("location: /customer/update.php?status=badinput");
     exit();
 }
 
@@ -36,7 +36,7 @@ if(!empty($password))
     $result = queryDatabase($sql);
     if($result->num_rows != 1)
     {
-        header("location: https://store.thadsander.com/customer/update.php?status=badinput");
+        header("location: /customer/update.php?status=badinput");
         exit();
     }
     $sql = "UPDATE users SET password = '" . $password ."' WHERE username = '". $username . "';";
@@ -44,5 +44,5 @@ if(!empty($password))
 }
 
 # redirect the user back to the customer profile page
-header("location: https://store.thadsander.com/customer/profile.php");
+header("location: /customer/profile.php");
 exit();

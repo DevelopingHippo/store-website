@@ -5,7 +5,7 @@ require_once "websiteFunctions.php";
 # Return results of SQL query
 function queryDatabase($sql)
 {
-    $conn = mysqli_connect("IP ADDRESS FOR DATABASE","DATABASE User","DATABASE PASSWORD", "DATABASE NAME");
+    $conn = mysqli_connect("db_store","web","config somehow else", "store");
     $result = $conn->query($sql);
     $conn->close();
     return $result;
@@ -14,7 +14,7 @@ function queryDatabase($sql)
 # Sanitize input before being added to SQL query
 function inputSanitize($input): string
 {
-    $conn = mysqli_connect("IP ADDRESS FOR DATABASE","DATABASE User","DATABASE PASSWORD", "DATABASE NAME");
+    $conn = mysqli_connect("db_store","web","config somehow else", "store");
     return mysqli_real_escape_string($conn, $input);
 }
 

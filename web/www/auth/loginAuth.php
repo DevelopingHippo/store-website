@@ -10,7 +10,7 @@ if(!empty($_POST["username"]) && !empty($_POST["password"])) # If Username and P
 }
 else # redirect the user to Login page with status message
 {
-    header("location: https://store.thadsander.com/auth/login.php?status=loginfail");
+    header("location: /auth/login.php?status=loginfail");
     exit();
 }
 
@@ -24,7 +24,7 @@ if ($result->num_rows == 1) # If query comes back with results
     {
         $_SESSION["uid"] = $username;
         $_SESSION["type"] = "customer";
-        header("location: https://store.thadsander.com/customer/profile.php");
+        header("location: /customer/profile.php");
     }
     else if($row["type"] == "employee") # If user is an Employee set SESSION values and redirect to Employee Panel page
     {
@@ -34,11 +34,11 @@ if ($result->num_rows == 1) # If query comes back with results
         {
             $_SESSION["admin"] = "true";
         }
-        header("location: https://store.thadsander.com/employee/panel.php");
+        header("location: /employee/panel.php");
     }
 }
 else # redirect the user to Login page with status message
 {
-    header("location: https://store.thadsander.com/auth/login.php?status=loginfail");
+    header("location: /auth/login.php?status=loginfail");
 }
 exit();

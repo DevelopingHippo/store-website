@@ -2,7 +2,7 @@
 session_start();
 if($_SESSION["type"] != 'employee')
 {
-    header("Location: https://store.thadsander.com/");
+    header("Location: /");
     exit();
 }
 ?>

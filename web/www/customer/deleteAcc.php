@@ -14,7 +14,7 @@ session_start();
     # If user is not a customer then redirect them to login
     if(empty($_SESSION["uid"]) || ($_SESSION["type"] != "customer"))
     {
-        header("location: https://store.thadsander.com/auth/login.php");
+        header("location: /auth/login.php");
         exit();
     }
     require_once "../php/databaseFunctions.php";
@@ -56,7 +56,7 @@ session_start();
             {
                 $deleteSQL = "DELETE FROM users WHERE username='".$username."' AND password='".$password."';";
                 queryDatabase($deleteSQL);
-                header("Location: https://store.thadsander.com/auth/signout.php");
+                header("Location: /auth/signout.php");
                 exit();
             }
         }

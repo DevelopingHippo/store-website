@@ -1,0 +1,35 @@
+version: "3.8"
+services:
+  web_store:
+    container_name: store_web
+    build:
+      - context: .
+      - dockerfile: Dockerfile
+    ports:
+      - "8442:80"
+      - "8443:443"
+    volumes:
+      - "./web:/var/www/html"
+    restart: unless-stopped
+    depends_on:
+      - db_store
+  db_store:
+    container_name: db
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: changeme
+      MYSQL_DATABASE: store
+      MYSQL_USER: web
+      MYSQL_PASSWORD: changeme2
+    volumes:
+      - "./database/schema.sql:/docker-entrypoint-initdb.d/1.sql"
+      - "./database/data.sql:/docker-entrypoint-initdb.d/2.sql"
+    ports:
+      - "9906:3306"
+    restart: always
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - "8080:80"

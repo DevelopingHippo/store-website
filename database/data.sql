@@ -9,29 +9,28 @@ DELETE FROM cpu;
 DELETE FROM gpu;
 
 # this is for creating employee information
-insert into users VALUES ("employeeUserName","employeeFirstName","employeeLastName","employee@email.com","employeePassword","employee",true);
+insert into users VALUES ("admin","Example","Admin","admin@example.com","admin","employee",true);
 
 
 # this is for creating customer informatiom
-insert into users VALUES ("customerUserName","customerFirstName","customerLastName","customer@email.com","customerPassword","customer",false);
-
+insert into users VALUES ("exampleUser","Example","User","customer@example.com","examplepassword","customer",false);
 
 
 # CPU Store Information
-insert into store VALUES("cpu","i5-10600", 314.99); 	# DONE
-insert into store VALUES("cpu","i5-10600K", 238.00);	# DONE
-insert into store VALUES("cpu","i5-12600K", 444.98);	# DONE
-insert into store VALUES("cpu","i7-7700K", 329.99);		# DONE
-insert into store VALUES("cpu","i7-10700", 322.99); 	# DONE
-insert into store VALUES("cpu","i7-10700K", 346.98);	# DONE
-insert into store VALUES("cpu","i7-11700", 319.99);		# DONE
-insert into store VALUES("cpu","i9-10900", 411.73);		# DONE
-insert into store VALUES("cpu","i9-10900K", 458.99);	# DONE
-insert into store VALUES("cpu","i9-11900K", 439.99);	# DONE
-insert into store VALUES("cpu","Ryzen 5 3600", 298.25);	# DONE
-insert into store VALUES("cpu","Ryzen 5 5600X", 294.00);# DONE
-insert into store VALUES("cpu","Ryzen 7 5800X", 383.24);# DONE
-insert into store VALUES("cpu","Ryzen 9 5900X", 559.99);# DONE
+insert into store VALUES("cpu","i5-10600", 314.99);
+insert into store VALUES("cpu","i5-10600K", 238.00);
+insert into store VALUES("cpu","i5-12600K", 444.98);
+insert into store VALUES("cpu","i7-7700K", 329.99);
+insert into store VALUES("cpu","i7-10700", 322.99);
+insert into store VALUES("cpu","i7-10700K", 346.98);
+insert into store VALUES("cpu","i7-11700", 319.99);
+insert into store VALUES("cpu","i9-10900", 411.73);
+insert into store VALUES("cpu","i9-10900K", 458.99);
+insert into store VALUES("cpu","i9-11900K", 439.99);
+insert into store VALUES("cpu","Ryzen 5 3600", 298.25);
+insert into store VALUES("cpu","Ryzen 5 5600X", 294.00);
+insert into store VALUES("cpu","Ryzen 7 5800X", 383.24);
+insert into store VALUES("cpu","Ryzen 9 5900X", 559.99);
 
 # GPU Store Information
 insert into store VALUES("gpu","GTX 1050 TI", 159.99);
@@ -430,24 +429,3 @@ insert into motherboard VALUES ("PRO Z690-A", 5546700003, "MSI", "LGA1700", 128,
 
 
 # Receipt ID is just +1 from the max receiptID
-
-# Insert "purchaseHistory" table values
-insert into purchaseHistory VALUES (0000000001, "customerUsername", "Trident Z", "ram", "G.Skill", 4446400001, 74.99);
-insert into purchaseHistory VALUES (0000000001, "customerUsername", "Z590 Gundam Edition", "motherboard", "ASUS", 5559100001, 319.99);
-insert into purchaseHistory VALUES (0000000001, "customerUsername", "V850 SFX", "psu", "Cooler Master", 3346300001, 144.99);
-insert into purchaseHistory VALUES (0000000001, "customerUsername", "MPG A-GF 750", "motherboard", "MSI", 3347500001, 144.99);
-
-insert into purchaseHistory VALUES (0000000002, "customerUsername", "MPG A-GF 750", "motherboard", "MSI", 3347500002, 144.99);
-insert into purchaseHistory VALUES (0000000002, "customerUsername", "B550M Pro4", "motherboard", "ASRock", 5522500001, 89.99);
-insert into purchaseHistory VALUES (0000000002, "customerUsername", "i7-7700K", "cpu", "Intel", 1177000001, 329.99);
-insert into purchaseHistory VALUES (0000000002, "customerUsername", "i7-7700K", "cpu", "Intel", 1177000002, 329.99);
-
-insert into purchaseHistory VALUES (0000000003, "customerUsername", "i7-7700K", "cpu", "Intel", 1177000003, 329.99);
-insert into purchaseHistory VALUES (0000000003, "customerUsername", "RTX 3060 TI", "gpu", "EVGA", 2230200001, 864.99);
-insert into purchaseHistory VALUES (0000000003, "customerUsername", "RTX 3060", "gpu", "EVGA", 2230100001, 447.99);
-insert into purchaseHistory VALUES (0000000003, "customerUsername", "Prime B560-Plus", "motherboard", "ASUS", 5564100001, 119.99);
-
-insert into purchaseHistory VALUES (0000000004, "customerUsername", "A520M S2H", "motherboard", "GigaByte", 5552200001, 82.99);
-insert into purchaseHistory VALUES (0000000004, "customerUsername", "RM850X", "psu", "Corsair", 3385900001, 149.99);
-insert into purchaseHistory VALUES (0000000004, "customerUsername", "MPG A-GF 750", "motherboard", "MSI", 3347500003, 144.99);
-insert into purchaseHistory VALUES (0000000004, "customerUsername", "Vengeance RGB Pro", "ram", "Corsair", 4416200001, 152.99);

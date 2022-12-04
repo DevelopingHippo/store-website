@@ -4,7 +4,7 @@ session_start();
 if(empty($_SESSION["uid"]) || ($_SESSION["type"] != "customer")) # If User is not a Customer
 {
     # Redirect to Login page
-    header("location: https://store.thadsander.com/auth/login.php");
+    header("location: /auth/login.php");
     exit();
 }
 ?>

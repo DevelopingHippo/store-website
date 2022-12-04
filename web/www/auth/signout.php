@@ -7,5 +7,5 @@ if(isset($_SESSION['uid'])){
 }
 
 # Redirect to Home page
-header("location: https://store.thadsander.com/index.php");
+header("location: /index.php");
 exit();

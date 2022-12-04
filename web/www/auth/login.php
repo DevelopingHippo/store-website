@@ -37,7 +37,7 @@ printTopMenu($_SESSION["type"], "Login");
             </tr>
             <tr>
                 <td>
-                    <a href="https://store.thadsander.com/auth/register.php">Register</a>
+                    <a href="/auth/register.php">Register</a>
                 </td>
                 <td>
                     <input type="submit" name="submit" value="Login">

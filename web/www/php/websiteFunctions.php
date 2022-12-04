@@ -8,20 +8,20 @@ function printTopMenu($type, $selected)
     echo "\n";
     if($selected == "Home")
     {
-        echo '<a class="selected" href="https://store.thadsander.com/index.php">Home</a>';
+        echo '<a class="selected" href="/index.php">Home</a>';
     }
     else
     {
-        echo '<a href="https://store.thadsander.com/index.php">Home</a>';
+        echo '<a href="/index.php">Home</a>';
     }
     echo "\n";
     if($selected == "Store")
     {
-        echo '<a class="selected" href="https://store.thadsander.com/store/store.php">Store</a>';
+        echo '<a class="selected" href="/store/store.php">Store</a>';
     }
     else
     {
-        echo '<a href="https://store.thadsander.com/store/store.php">Store</a>';
+        echo '<a href="/store/store.php">Store</a>';
     }
 
     if(!empty($type))
@@ -29,11 +29,11 @@ function printTopMenu($type, $selected)
         echo "\n";
         if($selected == "Cart")
         {
-            echo '<a class="selected" href="https://store.thadsander.com/store/cart.php">&#128722</a>';
+            echo '<a class="selected" href="/store/cart.php">&#128722</a>';
         }
         else
         {
-            echo '<a href="https://store.thadsander.com/store/cart.php">&#128722</a>';
+            echo '<a href="/store/cart.php">&#128722</a>';
         }
     }
 
@@ -42,39 +42,39 @@ function printTopMenu($type, $selected)
     {
         if($selected == "Profile")
         {
-            echo '<a class="selected" href="https://store.thadsander.com/customer/profile.php">Profile</a>';
+            echo '<a class="selected" href="/customer/profile.php">Profile</a>';
         }
         else
         {
-            echo '<a href="https://store.thadsander.com/customer/profile.php">Profile</a>';
+            echo '<a href="/customer/profile.php">Profile</a>';
         }
     }
     else if($type == "employee")
     {
         if($selected == "Profile")
         {
-            echo '<a class="selected" href="https://store.thadsander.com/employee/panel.php">Employee</a>';
+            echo '<a class="selected" href="/employee/panel.php">Employee</a>';
         }
         else
         {
-            echo '<a href="https://store.thadsander.com/employee/panel.php">Employee</a>';
+            echo '<a href="/employee/panel.php">Employee</a>';
         }
     }
     else
     {
         if($selected == "Login")
         {
-            echo '<a class="selected" href="https://store.thadsander.com/auth/login.php">Login&#128272</a>';
+            echo '<a class="selected" href="/auth/login.php">Login&#128272</a>';
         }
         else
         {
-            echo '<a href="https://store.thadsander.com/auth/login.php">Login&#128272</a>';
+            echo '<a href="/auth/login.php">Login&#128272</a>';
         }
     }
     echo "\n";
     if(!empty($type))
     {
-        echo '<a href="https://store.thadsander.com/auth/signout.php">Signout&#128275</a>';
+        echo '<a href="/auth/signout.php">Signout&#128275</a>';
         echo "\n";
     }
     echo '</div>';

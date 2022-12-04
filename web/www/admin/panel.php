@@ -4,7 +4,7 @@
 session_start();
 if($_SESSION["admin"] != "true")
 {
-    header("Location: https://store.thadsander.com/");
+    header("Location: /");
     exit();
 }
 ?>
