@@ -1,7 +1,6 @@
 
 <?php
 # Check if User is an Admin
-session_start();
 if($_SESSION["admin"] != "true")
 {
     header("Location: /");

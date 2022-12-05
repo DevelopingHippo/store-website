@@ -1,5 +1,4 @@
 <?php
-session_start();
 require_once "databaseFunctions.php";
 
 function filterProduct($productType): string

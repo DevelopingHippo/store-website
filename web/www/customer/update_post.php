@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 if(($_POST["password1"] !=  $_POST["password2"])) # If Passwords don't match
 {

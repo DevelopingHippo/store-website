@@ -1,5 +1,4 @@
 <?php
-session_start();
 require_once "websiteFunctions.php";
 
 # Return results of SQL query
