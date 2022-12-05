@@ -9,7 +9,7 @@ services:
       - "8442:80"
       - "8443:443"
     volumes:
-      - "./web/www:/var/www/html"
+      - "./web/www/:/var/www/html"
     networks:
       - store
     restart: unless-stopped
@@ -26,6 +26,7 @@ services:
       MYSQL_USER: web
       MYSQL_PASSWORD: changeme2
     volumes:
+      - "./database/data:/var/lib/mysql"
       - "./database/schema.sql:/docker-entrypoint-initdb.d/1.sql"
       - "./database/data.sql:/docker-entrypoint-initdb.d/2.sql"
     ports:
