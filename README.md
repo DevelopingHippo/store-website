@@ -18,10 +18,12 @@ as well as changing the connection info in /store-website/web/www/php/databaseFu
 `docker-compose up -d --force-recreate`
 
 ### SSL Certificates
-Rename your .pem and .key file to store.pem and store.key and move them into the /web/config/certs/ directory
+Rename your .pem and .key file to store.pem and store.key and move them into the /store-website/web/config/certs/ directory
 
-## Managing Admin and Employee Panel
-### Changing Admin Password
+## Getting Started
+There are two accounts created by default
 
-### Creating an Admin Account
-
+| Account Type  | Username    | Password |
+|---------------|-------------|----------|
+| Administrator | admin       | admin    |
+| Customer      | exampleUser | password |
