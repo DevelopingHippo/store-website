@@ -1,15 +1,15 @@
-version: "3.8"
+version: "3.7"
 services:
   web_store:
     container_name: store_web
     build:
-      - context: .
+      - context: ./web
       - dockerfile: Dockerfile
     ports:
       - "8442:80"
       - "8443:443"
     volumes:
-      - "./web:/var/www/html"
+      - "./web/www:/var/www/html"
     restart: unless-stopped
     depends_on:
       - db_store
@@ -30,6 +30,14 @@ services:
     restart: always
 
   phpmyadmin:
+    container_name: db_admin
     image: phpmyadmin/phpmyadmin
+    environment:
+      PMA_PORT: 3306
+      PMA_HOST: db
+      PMA_USER: root
+      PMA_PASSWORD: changeme
     ports:
       - "8080:80"
+    depends_on:
+      - db_store
