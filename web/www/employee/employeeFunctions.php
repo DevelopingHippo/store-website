@@ -64,10 +64,6 @@ function printCustomerCreate()
     {
         $_POST["action"] = "";
     }
-    if(!isset($status))
-    {
-        $status = "";
-    }
 
     # Print out Customer Create POST Form
     echo "<h3>Create</h3>";
