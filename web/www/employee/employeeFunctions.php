@@ -4,7 +4,6 @@ require_once "../php/websiteFunctions.php";
 
 function printCustomerSearch()
 {
-
     # Print Customer Search POST Form
     echo "<h3>Search</h3>";
     echo "<div id='tdBorder'><table class='center'>";

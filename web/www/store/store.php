@@ -59,6 +59,17 @@ printTopMenu($_SESSION["type"], "Store");
     <div id="results">
         <table class="center">
             <?php
+            if(!isset($_POST["search"])) {
+                $_POST["search"] = "";
+            }
+            if(!isset($_POST["productType"]))
+            {
+                $_POST["productType"] = "";
+            }
+            if(!isset($_POST["orderBy"]))
+            {
+                $_POST["orderBy"] = "";
+            }
             searchStoreQuery($_POST["search"], $_POST["productType"], $_POST["orderBy"]);
             ?>
         </table>

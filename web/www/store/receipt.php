@@ -1,5 +1,9 @@
 <?php
 session_start();
+if (!isset($_SESSION["type"]))
+{
+    $_SESSION["type"] = "";
+}
 if(empty($_SESSION["uid"]))
 {
     header("location: https://store.thadsander.com/auth/login.php");

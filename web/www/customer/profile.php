@@ -1,5 +1,9 @@
 <?php
 session_start();
+if (!isset($_SESSION["type"]))
+{
+    $_SESSION["type"] = "";
+}
 # If user is not a customer then redirect them to Login page
 if(empty($_SESSION["uid"]) || ($_SESSION["type"] != "customer"))
 {

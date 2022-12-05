@@ -1,5 +1,9 @@
 <?php
 session_start();
+if (!isset($_SESSION["type"]))
+{
+    $_SESSION["type"] = "";
+}
 ?>
 <html lang="en">
 <head>
@@ -47,6 +51,10 @@ printTopMenu($_SESSION["type"], "Login");
 </form>
 <?php
 # Print out Status Message
+if (!isset($_GET["status"]))
+{
+    $_GET["status"] = "";
+}
 $loginStatus = $_GET["status"];
 if($loginStatus == "loginfail")
 {

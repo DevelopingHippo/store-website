@@ -1,5 +1,10 @@
 <?php
 session_start();
+if (!isset($_SESSION["type"]))
+{
+    $_SESSION["type"] = "";
+}
+
 if(($_POST["password1"] !=  $_POST["password2"])) # If Passwords don't match
 {
     # Redirect with back with Status Message

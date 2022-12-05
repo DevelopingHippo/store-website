@@ -1,5 +1,10 @@
 <?php
 session_start();
+session_start();
+if (!isset($_SESSION["type"]))
+{
+    $_SESSION["type"] = "";
+}
 if($_SESSION["type"] != 'employee')
 {
     header("Location: /");
