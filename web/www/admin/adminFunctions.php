@@ -39,12 +39,19 @@ function printAdminEmployeeSearch()
         if (!empty($_POST["usernameSearch"]))
         {
             $username = inputSanitize($_POST["usernameSearch"]);
-            $sql = "SELECT username,firstname,lastname,email FROM users WHERE username LIKE '%" . $username . "%' AND type='employee';";
+            $sql = "SELECT username,firstname,lastname,email,admin FROM users WHERE username LIKE '%" . $username . "%' AND type='employee';";
             $result = queryDatabase($sql);
             if ($result->num_rows == 1)
             {
                 $row = $result->fetch_assoc();
-                echo "<div id='tdBorder'><table class='center'><tr><td><b>Username:</b></td><td>" . $row["username"] . "</td></tr><tr><td><b>Firstname:</b></td><td>" . $row["firstname"] . "</td></tr><tr><td><b>Lastname:</b></td><td>" . $row["lastname"] . "</td></tr><tr><td><b>Email:</b></td><td>" . $row["email"] . "</td></tr></table></div>";
+                if($row["admin"] == "1")
+                {
+                    echo "<div id='tdBorder'><table class='center'><tr><td><b>Username:</b></td><td>" . $row["username"] . "</td></tr><tr><td><b>Firstname:</b></td><td>" . $row["firstname"] . "</td></tr><tr><td><b>Lastname:</b></td><td>" . $row["lastname"] . "</td></tr><tr><td><b>Email:</b></td><td>" . $row["email"] . "</td></tr><tr><td><b>Admin:</b></td><td>True</td></tr></table></div>";
+                }
+                else
+                {
+                    echo "<div id='tdBorder'><table class='center'><tr><td><b>Username:</b></td><td>" . $row["username"] . "</td></tr><tr><td><b>Firstname:</b></td><td>" . $row["firstname"] . "</td></tr><tr><td><b>Lastname:</b></td><td>" . $row["lastname"] . "</td></tr><tr><td><b>Email:</b></td><td>" . $row["email"] . "</td></tr><tr><td><b>Admin:</b></td><td>False</td></tr></table></div>";
+                }
             }
             else
             {
@@ -232,7 +239,7 @@ function printAdminEmployeeUpdate()
                 {
                     if($_POST["adminTrueUpdate"] == "Yes")
                     {
-                        $sql = "UPDATE users SET admin true WHERE username='" . $username . "' AND type = 'employee';";
+                        $sql = "UPDATE users SET admin = true WHERE username='" . $username . "' AND type = 'employee';";
                         queryDatabase($sql);
                     }
                 }
