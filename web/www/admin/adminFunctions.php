@@ -90,7 +90,7 @@ function printAdminEmployeeCreate()
     echo '<tr><td>*Email:</td><td><input type="text" name="emailCreate"></td></tr>';
     echo '<tr><td>*Password:</td><td><input type="password" name="password1Create"></td></tr>';
     echo '<tr><td>*Confirm Password:</td><td><input type="password" name="password2Create"></td></tr>';
-    echo '<tr><td>Admin:</td><td><input type="checkbox" name="adminTrue" value="Yes"></td></tr>';
+    echo '<tr><td>Admin:</td><td><input type="checkbox" name="adminTrueCreate" value="Yes"></td></tr>';
     echo "</table></div>";
     echo '<tr><td></td><td><input type="submit" name="action" value="Create Employee"></td></tr>';
     echo "</form>";
@@ -111,9 +111,9 @@ function printAdminEmployeeCreate()
                 $result = queryDatabase($sql);
                 if ($result->num_rows == 0)
                 {
-                    if(!empty($_POST["adminTrue"]))
+                    if(!empty($_POST["adminTrueCreate"]))
                     {
-                        if($_POST["adminTrue"] == "Yes")
+                        if($_POST["adminTrueCreate"] == "Yes")
                         {
                             $sql = "INSERT INTO users VALUES ('" . $username . "','" . $firstname . "','" . $lastname . "','" . $email . "','" . $password . "','employee',true);";
                         }
@@ -182,7 +182,7 @@ function printAdminEmployeeUpdate()
     echo '<tr><td>Email:</td><td><input type="text" name="emailUpdate"></td></tr>';
     echo '<tr><td>Password:</td><td><input type="password" name="password1Update"></td></tr>';
     echo '<tr><td>Confirm Password:</td><td><input type="password" name="password2Update"></td></tr>';
-    echo '<tr><td>Admin:</td><td><input type="checkbox" name="adminTrue" value="Yes"></td></tr>';
+    echo '<tr><td>Admin:</td><td><input type="checkbox" name="adminTrueUpdate" value="Yes"></td></tr>';
     echo "</table></div>";
     echo '<tr><td></td><td><input type="submit" name="action" value="Update Employee"></td></tr>';
     echo "</form>";
@@ -228,9 +228,9 @@ function printAdminEmployeeUpdate()
                     $sql = "UPDATE users SET email='" . $email . "' WHERE username='" . $username . "' AND type = 'employee';";
                     queryDatabase($sql);
                 }
-                if (!empty($_POST["adminTrue"]))
+                if (!empty($_POST["adminTrueUpdate"]))
                 {
-                    if($_POST["adminTrue"] == "Yes")
+                    if($_POST["adminTrueUpdate"] == "Yes")
                     {
                         $sql = "UPDATE users SET admin true WHERE username='" . $username . "' AND type = 'employee';";
                         queryDatabase($sql);

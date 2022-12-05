@@ -37,6 +37,10 @@ if ($result->num_rows == 1) # If query comes back with results
         {
             $_SESSION["admin"] = "true";
         }
+        else
+        {
+            $_SESSION["admin"] = "false";
+        }
         header("location: /employee/panel.php");
     }
 }
