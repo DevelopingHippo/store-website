@@ -2,10 +2,27 @@
 require_once "../php/databaseFunctions.php";
 require_once "../php/websiteFunctions.php";
 
+if(!isset($_POST["action"]))
+{
+    $_POST["action"] = "";
+}
+if(!isset($status))
+{
+    $status = "";
+}
 
 # Employee Search Function used for printing out HTML and handling POST requests
 function printAdminEmployeeSearch()
 {
+
+    if(!isset($_POST["action"]))
+    {
+        $_POST["action"] = "";
+    }
+    if(!isset($status))
+    {
+        $status = "";
+    }
 
     # Print Employee Search POST Form
     echo "<h3>Search</h3>";
@@ -54,6 +71,14 @@ function printAdminEmployeeSearch()
 # Employee Create Function used for printing out HTML and handling POST requests
 function printAdminEmployeeCreate()
 {
+    if(!isset($_POST["action"]))
+    {
+        $_POST["action"] = "";
+    }
+    if(!isset($status))
+    {
+        $status = "";
+    }
 
     # Print out Employee Create POST Form
     echo "<h3>Create</h3>";
@@ -127,6 +152,14 @@ function printAdminEmployeeCreate()
 # Update Employee Information Function used for printing out HTML and handling POST requests
 function printAdminEmployeeUpdate()
 {
+    if(!isset($_POST["action"]))
+    {
+        $_POST["action"] = "";
+    }
+    if(!isset($status))
+    {
+        $status = "";
+    }
 
     # Print out Employee Update POST Form
     echo "<h3>Update</h3>";
@@ -236,6 +269,14 @@ function printAdminEmployeeUpdate()
 # Delete an Employee Function used for printing out HTML and handling POST requests
 function printAdminEmployeeDelete()
 {
+    if(!isset($_POST["action"]))
+    {
+        $_POST["action"] = "";
+    }
+    if(!isset($status))
+    {
+        $status = "";
+    }
 
     # Print out Employee Delete POST Form
     echo "<h3>Delete</h3>";
@@ -301,6 +342,14 @@ function printAdminEmployeeDelete()
 # Admin SQL Prompt used for printing out HTML page and handling POST requests
 function printAdminSQLPrompt()
 {
+    if(!isset($_POST["action"]))
+    {
+        $_POST["action"] = "";
+    }
+    if(!isset($status))
+    {
+        $status = "";
+    }
 
     # Print out SQL Prompt POST Form
     echo '<table class="center"><form action="panel.php" method="POST">';

@@ -4,6 +4,15 @@ require_once "../php/websiteFunctions.php";
 
 function printCustomerSearch()
 {
+    if(!isset($_POST["action"]))
+    {
+        $_POST["action"] = "";
+    }
+    if(!isset($status))
+    {
+        $status = "";
+    }
+
     # Print Customer Search POST Form
     echo "<h3>Search</h3>";
     echo "<div id='tdBorder'><table class='center'>";
@@ -51,6 +60,14 @@ function printCustomerSearch()
 
 function printCustomerCreate()
 {
+    if(!isset($_POST["action"]))
+    {
+        $_POST["action"] = "";
+    }
+    if(!isset($status))
+    {
+        $status = "";
+    }
 
     # Print out Customer Create POST Form
     echo "<h3>Create</h3>";
@@ -124,6 +141,15 @@ function printCustomerCreate()
 
 function printCustomerUpdate()
 {
+
+    if(!isset($_POST["action"]))
+    {
+        $_POST["action"] = "";
+    }
+    if(!isset($status))
+    {
+        $status = "";
+    }
 
     # Print out Customer Update POST Form
     echo "<h3>Update</h3>";
@@ -230,6 +256,14 @@ function printCustomerUpdate()
 
 function printCustomerDelete()
 {
+    if(!isset($_POST["action"]))
+    {
+        $_POST["action"] = "";
+    }
+    if(!isset($status))
+    {
+        $status = "";
+    }
 
     # Print out Customer Delete POST Form
     echo "<h3>Delete</h3>";
@@ -295,6 +329,14 @@ function printCustomerDelete()
 
 function printProductRestock()
 {
+    if(!isset($_POST["action"]))
+    {
+        $_POST["action"] = "";
+    }
+    if(!isset($status))
+    {
+        $status = "";
+    }
 
     # Print Restock Product POST Form
     echo "<h3>Restock</h3>";
@@ -360,6 +402,14 @@ function printProductRestock()
 
 function printProductSearch()
 {
+    if(!isset($_POST["action"]))
+    {
+        $_POST["action"] = "";
+    }
+    if(!isset($status))
+    {
+        $status = "";
+    }
     # Print Product Search POST Form
     echo "<h3>Search</h3>";
     echo "<div id='tdBorder'><table class='center'>";
@@ -397,6 +447,15 @@ function printProductSearch()
 
 function printProductUpdate()
 {
+    if(!isset($_POST["action"]))
+    {
+        $_POST["action"] = "";
+    }
+    if(!isset($status))
+    {
+        $status = "";
+    }
+
     echo "<h3>Update</h3>";
     echo "<i>2-Step Process</i>";
 
@@ -487,9 +546,18 @@ function printProductUpdate()
 
 function printProductAlerts()
 {
+    if(!isset($_POST["action"]))
+    {
+        $_POST["action"] = "";
+    }
+    if(!isset($status))
+    {
+        $status = "";
+    }
+
     # Print Product Alerts
     echo "<br><h3>Product Alerts</h3>";
-    $sqlStock = "SELECT * FROM storeStock WHERE stockCount < 5 ORDER BY stockCount asc;";
+    $sqlStock = "SELECT * FROM storeStock WHERE stockCount < 5 ORDER BY stockCount;";
     $stockResults = queryDatabase($sqlStock);
     if ($stockResults->num_rows > 0)
     {
@@ -511,6 +579,15 @@ function printProductAlerts()
 
 function printOrderSearch()
 {
+    if(!isset($_POST["action"]))
+    {
+        $_POST["action"] = "";
+    }
+    if(!isset($status))
+    {
+        $status = "";
+    }
+
     # Print Order Search POST Form
     echo "<h3>Search</h3>";
     echo "<div id='tdBorder'><table class='center'>";
@@ -560,6 +637,15 @@ function printOrderSearch()
 
 function printOrderUpdate()
 {
+    if(!isset($_POST["action"]))
+    {
+        $_POST["action"] = "";
+    }
+    if(!isset($status))
+    {
+        $status = "";
+    }
+
     # Print Order Update POST Form
     echo "<h3>Update</h3>";
     echo "<i>2-Step Process</i>";
@@ -729,6 +815,15 @@ function printOrderUpdate()
 # Order Refund function used for printing out HTML and handling POST requests
 function printOrderRefund()
 {
+    if(!isset($_POST["action"]))
+    {
+        $_POST["action"] = "";
+    }
+    if(!isset($status))
+    {
+        $status = "";
+    }
+
     # Print Product Refund POST Form
     echo "<h3>Refund</h3>";
     echo "<div id='tdBorder'><table class='center'>";

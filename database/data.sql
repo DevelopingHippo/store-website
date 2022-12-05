@@ -129,6 +129,8 @@ insert into cpu VALUES ("i5-12600K", 1178000018, "Intel", "LGA 1700", 10, 3.7, 4
 insert into cpu VALUES ("i5-12600K", 1178000019, "Intel", "LGA 1700", 10, 3.7, 4.9);
 insert into cpu VALUES ("i5-12600K", 1178000020, "Intel", "LGA 1700", 10, 3.7, 4.9);
 
+insert into cpu VALUES ("i7-7700K", 1177000002, "Intel", "LGA 1151", 4, 3.7, 4.2);
+insert into cpu VALUES ("i7-7700K", 1177000003, "Intel", "LGA 1151", 4, 3.7, 4.2);
 insert into cpu VALUES ("i7-7700K", 1177000004, "Intel", "LGA 1151", 4, 3.7, 4.2);
 insert into cpu VALUES ("i7-7700K", 1177000005, "Intel", "LGA 1151", 4, 3.7, 4.2);
 insert into cpu VALUES ("i7-7700K", 1177000006, "Intel", "LGA 1151", 4, 3.7, 4.2);
@@ -252,6 +254,8 @@ insert into cpu VALUES ("i9-10900K", 1112300018, "Intel", "LGA 1200", 10, 3.7, 5
 insert into cpu VALUES ("i9-10900K", 1112300019, "Intel", "LGA 1200", 10, 3.7, 5.30);
 insert into cpu VALUES ("i9-10900K", 1112300020, "Intel", "LGA 1200", 10, 3.7, 5.30);
 
+insert into cpu VALUES ("i9-11900K", 1179000001, "Intel", "LGA 1200", 8, 3.5, 5.3);
+insert into cpu VALUES ("i9-11900K", 1179000002, "Intel", "LGA 1200", 8, 3.5, 5.3);
 insert into cpu VALUES ("i9-11900K", 1179000003, "Intel", "LGA 1200", 8, 3.5, 5.3);
 insert into cpu VALUES ("i9-11900K", 1179000004, "Intel", "LGA 1200", 8, 3.5, 5.3);
 insert into cpu VALUES ("i9-11900K", 1179000005, "Intel", "LGA 1200", 8, 3.5, 5.3);
@@ -376,6 +380,7 @@ insert into gpu VALUES("GTX 1050 TI", 2211500002, "EVGA", 1340, 4, "Red");
 insert into gpu VALUES("GTX 1050 TI", 2211500003, "EVGA", 1340, 4, "Red");
 insert into gpu VALUES("RTX 3060", 2230100002, "EVGA", 1320, 12, "Black");
 insert into gpu VALUES("RTX 3060", 2230100003, "EVGA", 1320, 12, "Black");
+insert into gpu VALUES("RTX 3060 TI", 2230200001, "EVGA", 1410, 8, "Black");
 insert into gpu VALUES("RTX 3060 TI", 2230200002, "EVGA", 1410, 8, "Black");
 insert into gpu VALUES("RTX 3060 TI", 2230200003, "EVGA", 1410, 8, "Black");
 
@@ -390,6 +395,10 @@ insert into psu VALUES ("RM850X", 3385900003, "Corsair", 850, "Full", "80 Plus G
 insert into psu VALUES ("RM850X", 3385900004, "Corsair", 850, "Full", "80 Plus Gold");
 insert into psu VALUES ("V850 SFX", 3346300002, "Cooler Master", 850, "Full", "80 Plus Gold");
 insert into psu VALUES ("V850 SFX", 3346300003, "Cooler Master", 850, "Full", "80 Plus Gold");
+
+insert into psu VALUES ("MPG A-GF 750", 3347500001, "MSI", 750, "Full", "80 Plus Gold");
+insert into psu VALUES ("MPG A-GF 750", 3347500002, "MSI", 750, "Full", "80 Plus Gold");
+insert into psu VALUES ("MPG A-GF 750", 3347500003, "MSI", 750, "Full", "80 Plus Gold");
 insert into psu VALUES ("MPG A-GF 750", 3347500004, "MSI", 750, "Full", "80 Plus Gold");
 insert into psu VALUES ("MPG A-GF 750", 3347500005, "MSI", 750, "Full", "80 Plus Gold");
 insert into psu VALUES ("MPG A-GF 750", 3347500006, "MSI", 750, "Full", "80 Plus Gold");
@@ -398,6 +407,7 @@ insert into psu VALUES ("CORE GM 500", 3368200002, "SeaSonic", 500, "Semi", "80 
 insert into psu VALUES ("CORE GM 500", 3368200003, "SeaSonic", 500, "Semi", "80 Plus Gold");
 
 # Insert "ram" table values
+insert into ram VALUES ("Vengeance RGB Pro", 4416200001, "Corsair", 3600, 16, 2, "RGB");
 insert into ram VALUES ("Vengeance RGB Pro", 4416200002, "Corsair", 3600, 16, 2, "RGB");
 insert into ram VALUES ("Vengeance RGB Pro", 4416200003, "Corsair", 3600, 16, 2, "RGB");
 insert into ram VALUES ("Vengeance RGB Pro", 4416200004, "Corsair", 3600, 16, 2, "RGB");
@@ -415,12 +425,15 @@ insert into ram VALUES ("Ballistix", 4456300002, "Crucial", 3600, 8, 2, "Black")
 insert into ram VALUES ("Ballistix", 4456300003, "Crucial", 3600, 8, 2, "Black");
 
 # Insert "motherboard" table values
+    insert into motherboard VALUES ("A520M S2H", 5552200001, "GigaByte", "AM4", 64, 2, "Black");
 insert into motherboard VALUES ("A520M S2H", 5552200002, "GigaByte", "AM4", 64, 2, "Black");
 insert into motherboard VALUES ("A520M S2H", 5552200003, "GigaByte", "AM4", 64, 2, "Black");
 insert into motherboard VALUES ("Z590 Gundam Edition", 5559100002, "ASUS", "LGA 1200", 128, 4, "White");
 insert into motherboard VALUES ("Z590 Gundam Edition", 5559100003, "ASUS", "LGA 1200", 128, 4, "White");
+insert into motherboard VALUES ("Prime B560-Plus", 5564100001, "ASUS", "LGA 1200", 128, 4, "Silver");
 insert into motherboard VALUES ("Prime B560-Plus", 5564100002, "ASUS", "LGA 1200", 128, 4, "Silver");
 insert into motherboard VALUES ("Prime B560-Plus", 5564100003, "ASUS", "LGA 1200", 128, 4, "Silver");
+insert into motherboard VALUES ("B550M Pro4", 5522500001, "ASRock", "AM4", 128, 4, "Silver");
 insert into motherboard VALUES ("B550M Pro4", 5522500002, "ASRock", "AM4", 128, 4, "Silver");
 insert into motherboard VALUES ("B550M Pro4", 5522500003, "ASRock", "AM4", 128, 4, "Silver");
 insert into motherboard VALUES ("PRO Z690-A", 5546700001, "MSI", "LGA1700", 128, 4, "Black");
@@ -429,3 +442,9 @@ insert into motherboard VALUES ("PRO Z690-A", 5546700003, "MSI", "LGA1700", 128,
 
 
 # Receipt ID is just +1 from the max receiptID
+# Insert "purchaseHistory" table values
+insert into purchaseHistory VALUES (0000000001, "exampleUser", "Trident Z", "ram", "G.Skill", 4446400001, 74.99);
+insert into purchaseHistory VALUES (0000000001, "exampleUser", "Z590 Gundam Edition", "motherboard", "ASUS", 5559100001, 319.99);
+insert into purchaseHistory VALUES (0000000001, "exampleUser", "V850 SFX", "psu", "Cooler Master", 3346300001, 144.99);
+insert into purchaseHistory VALUES (0000000001, "exampleUser", "i7-7700K", "cpu", "Intel", 1177000001, 329.99);
+insert into purchaseHistory VALUES (0000000001, "exampleUser", "RTX 3060", "gpu", "EVGA", 2230100001, 447.99);
