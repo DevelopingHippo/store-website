@@ -30,6 +30,10 @@ printTopMenu($_SESSION["type"], "Profile");
 $username = $_SESSION["uid"];
 echo '<h2 style="text-align:left;">Currently Logged in as: ' . $username . '  ';
 
+if(!isset($_SESSION))
+{
+    $_SESSION["admin"] = "false";
+}
 if($_SESSION["admin"] == "true")
 {
     echo '<a href="../admin/panel.php">Admin Panel</a>';

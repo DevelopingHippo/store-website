@@ -90,6 +90,7 @@ function printAdminEmployeeCreate()
     echo '<tr><td>*Email:</td><td><input type="text" name="emailCreate"></td></tr>';
     echo '<tr><td>*Password:</td><td><input type="password" name="password1Create"></td></tr>';
     echo '<tr><td>*Confirm Password:</td><td><input type="password" name="password2Create"></td></tr>';
+    echo '<tr><td>Admin:</td><td><input type="checkbox" name="adminTrue" value="Yes"></td></tr>';
     echo "</table></div>";
     echo '<tr><td></td><td><input type="submit" name="action" value="Create Employee"></td></tr>';
     echo "</form>";
@@ -110,7 +111,16 @@ function printAdminEmployeeCreate()
                 $result = queryDatabase($sql);
                 if ($result->num_rows == 0)
                 {
-                    $sql = "INSERT INTO users VALUES ('" . $username . "','" . $firstname . "','" . $lastname . "','" . $email . "','" . $password . "','employee',false);";
+                    if(!empty($_POST["adminTrue"]))
+                    {
+                        if($_POST["adminTrue"] == "Yes")
+                        {
+                            $sql = "INSERT INTO users VALUES ('" . $username . "','" . $firstname . "','" . $lastname . "','" . $email . "','" . $password . "','employee',true);";
+                        }
+                    }
+                    else {
+                        $sql = "INSERT INTO users VALUES ('" . $username . "','" . $firstname . "','" . $lastname . "','" . $email . "','" . $password . "','employee',false);";
+                    }
                     queryDatabase($sql);
                     $status = "custAddSuccess";
                 }
@@ -172,6 +182,7 @@ function printAdminEmployeeUpdate()
     echo '<tr><td>Email:</td><td><input type="text" name="emailUpdate"></td></tr>';
     echo '<tr><td>Password:</td><td><input type="password" name="password1Update"></td></tr>';
     echo '<tr><td>Confirm Password:</td><td><input type="password" name="password2Update"></td></tr>';
+    echo '<tr><td>Admin:</td><td><input type="checkbox" name="adminTrue" value="Yes"></td></tr>';
     echo "</table></div>";
     echo '<tr><td></td><td><input type="submit" name="action" value="Update Employee"></td></tr>';
     echo "</form>";
@@ -216,6 +227,14 @@ function printAdminEmployeeUpdate()
                     $email = inputSanitize($_POST["emailUpdate"]);
                     $sql = "UPDATE users SET email='" . $email . "' WHERE username='" . $username . "' AND type = 'employee';";
                     queryDatabase($sql);
+                }
+                if (!empty($_POST["adminTrue"]))
+                {
+                    if($_POST["adminTrue"] == "Yes")
+                    {
+                        $sql = "UPDATE users SET admin true WHERE username='" . $username . "' AND type = 'employee';";
+                        queryDatabase($sql);
+                    }
                 }
                 if (!empty($_POST["password1Update"]))
                 {
