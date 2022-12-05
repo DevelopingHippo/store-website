@@ -1,4 +1,4 @@
-use sat3210;
+use store;
 DELETE FROM purchaseHistory;
 DELETE FROM store;
 DELETE FROM users;

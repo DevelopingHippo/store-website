@@ -1,21 +1,5 @@
 # clear out current database tables
-use sat3210;
-drop table cart;
-drop table purchaseHistory;
-drop table gpu;
-drop table cpu;
-drop table psu;
-drop table ram;
-drop table motherboard;
-drop table store;
-drop table users;
-drop view storeStock;
-drop view cpuStock;
-drop view gpuStock;
-drop view psuStock;
-drop view ramStock;
-drop view motherboardStock;
-
+use store;
 
 # universal "store" table
 create table store(
