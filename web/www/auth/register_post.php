@@ -1,6 +1,6 @@
 <?php
+session_start();
 require_once "../php/databaseFunctions.php";
-
 if(empty($_POST["firstname"]) || empty($_POST["lastname"]) || empty($_POST["email"]) || empty($_POST["username"]) || empty($_POST["password1"]) || ($_POST["password1"] !=  $_POST["password2"])) # If user input is empty AND passwords don't match
 {
     # Redirect user back to Registration page with Status Message

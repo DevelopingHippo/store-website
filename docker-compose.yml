@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   web_store:
-    container_name: store_web
+    container_name: web_store
     build:
       context: ./web
       dockerfile: Dockerfile

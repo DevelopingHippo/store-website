@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 # Print out Site Navigation Menu
 function printTopMenu($type, $selected)
 {

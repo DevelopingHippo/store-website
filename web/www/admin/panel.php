@@ -1,5 +1,5 @@
-
 <?php
+session_start();
 # Check if User is an Admin
 if($_SESSION["admin"] != "true")
 {
