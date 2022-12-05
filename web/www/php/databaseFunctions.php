@@ -14,7 +14,7 @@ function queryDatabase($sql)
 # Sanitize input before being added to SQL query
 function inputSanitize($input): string
 {
-    $conn = mysqli_connect("db_store","web","config somehow else", "store");
+    $conn = new mysqli("db_store","web","config somehow else", "store");
     return mysqli_real_escape_string($conn, $input);
 }
 

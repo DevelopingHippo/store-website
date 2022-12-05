@@ -8,7 +8,4 @@ RUN apt-get update && apt-get upgrade -y
 
 COPY ./config/certs/store.key /etc/apache2/ssl/store.key
 COPY ./config/certs/store.pem /etc/apache2/ssl/store.pem
-COPY ./config/store.conf /etc/apache2/sites-available/store.conf
-
-RUN a2ensite store.conf
-RUN service apache2 reload
+COPY ./config/store.conf /etc/apache2/sites-available/000-default.conf

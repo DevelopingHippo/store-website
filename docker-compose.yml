@@ -3,18 +3,21 @@ services:
   web_store:
     container_name: store_web
     build:
-      - context: ./web
-      - dockerfile: Dockerfile
+      context: ./web
+      dockerfile: Dockerfile
     ports:
       - "8442:80"
       - "8443:443"
     volumes:
       - "./web/www:/var/www/html"
+    networks:
+      - store
     restart: unless-stopped
     depends_on:
       - db_store
+
   db_store:
-    container_name: db
+    container_name: db_store
     image: mysql
     command: --default-authentication-plugin=mysql_native_password
     environment:
@@ -27,17 +30,11 @@ services:
       - "./database/data.sql:/docker-entrypoint-initdb.d/2.sql"
     ports:
       - "9906:3306"
+    networks:
+      - store
     restart: always
 
-  phpmyadmin:
-    container_name: db_admin
-    image: phpmyadmin/phpmyadmin
-    environment:
-      PMA_PORT: 3306
-      PMA_HOST: db
-      PMA_USER: root
-      PMA_PASSWORD: changeme
-    ports:
-      - "8080:80"
-    depends_on:
-      - db_store
+
+networks:
+  store:
+    driver: bridge
